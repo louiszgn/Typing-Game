@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Typing Game - Louis ZEGGANE</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="wordbeater">
+      <h1 class="title">WordBeater</h1>
+      <div class="content">
+        <p>Type the given word within <span class="timeByWord"></span> seconds:</p>
+        <p id="word"></p>
+        <input type="text" id="input" placeholder="Start typing...">
+        <div class="gameover">Game Over!!!</div>
+        <div class="stats">
+          <h3>Time left: <span class="timeLeft"></span>s</h3>
+          <h3>Score: <span class="score"></span></h3>
+          <h3 class="btnLeaderboard">LeaderBoard</h3>
+        </div>
+        <div class="instructions">
+          <h3>Instructions</h3>
+          <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score will reset.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupLeaderboard">
+      <div class="leaderboard">
+        <div class="close">X</div>
+        <table class="content">
+          <tr><th>Name</th><th>Score</th></tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

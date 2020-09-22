@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #505050;
+  --secondary-color: #808080;
+
+  --red: #FF6347;
+  --green: #41A317;
+  --white: #FFF;
+  --black: #080808;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+/********** WordBeater **********/
+#wordbeater {
+  width: 50vw;
+  height: 75vh;
+  max-width: 650px;
+  max-height: 750px;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+#wordbeater .title {
+  padding: 20px 0;
+  margin: 0;
+  background-color: var(--secondary-color);
+}
+
+#wordbeater .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 83%;
+  margin: 20px;
+}
+
+#wordbeater .timeByWord {
+  color: var(--green);
+}
+
+#wordbeater #word {
+  font-size: 60px;
+  margin: 20px 0;
+}
+
+#wordbeater input[type=text] {
+  width: 80%;
+  padding: 10px;
+  margin: 20px 0;
+  border: unset;
+  border-radius: 7px;
+}
+
+#wordbeater .gameover {
+  visibility: hidden;
+  font-size: 50px;
+  color: var(--red);
+}
+#wordbeater .gameover.show {
+  visibility: visible;
+}
+
+#wordbeater .stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+#wordbeater .stats .btnLeaderboard {
+  cursor: pointer;
+}
+
+#wordbeater .instructions {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+}
+
+#wordbeater .instructions h3 {
+  margin-top: 0;
+}
+
+#wordbeater .instructions p {
+  margin-bottom: 0;
+}
+/********** End WordBeater **********/
+
+/********** LeaderBoard **********/
+#popupLeaderboard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .6);
+  visibility: hidden;
+  z-index: -9;
+}
+#popupLeaderboard.show {
+  visibility: visible;
+  z-index: 9;
+}
+
+#popupLeaderboard .leaderboard {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  background-color: var(--primary-color);
+  border-radius: 7px;
+}
+
+#popupLeaderboard .leaderboard .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#popupLeaderboard .leaderboard .content {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+/********** End LeaderBoard **********/
